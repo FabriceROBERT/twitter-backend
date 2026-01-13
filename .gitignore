@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*.pyo
+*$py.class
+*.so
+.Python
+.venv/
+*.egg-info/
+
+# Environnement virtuel
+venv/
+
+# IDE
+.vscode/
+
+# Env files
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+~$*.doc*
+~WRL*.tmp
