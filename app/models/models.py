@@ -1,4 +1,3 @@
-# app/models/user.py
 from datetime import datetime, timezone
 from typing import List, Optional
 from sqlalchemy import DateTime, String, Text, Integer, Float, Boolean, ForeignKey, Table, Column, func

@@ -1,3 +1,4 @@
+# alembic/env.py
 from logging.config import fileConfig
 import os
 from sqlalchemy import engine_from_config, pool
@@ -5,6 +6,20 @@ from app.core.config import settings
 from alembic import context
 from app.db.database import Base
 
+from app.models.models import (
+    User,
+    Tweet,
+    Like,
+    Retweet,
+    Reply,
+    Follow,
+    Hashtag,
+    TweetHashtag,
+    Mention,
+    Notification,
+    Bookmark,
+    FacialExpression,
+)
 
 target_metadata = Base.metadata
 
