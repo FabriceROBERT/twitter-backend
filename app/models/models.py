@@ -4,7 +4,7 @@ from sqlalchemy import DateTime, String, Text, Integer, Float, Boolean, ForeignK
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from ..db.database import Base
 
-
+# N-to-N relation
 TweetHashtag = Table(
     "tweet_hashtags",
     Base.metadata,
@@ -80,7 +80,6 @@ class Tweet(Base):
     image_url: Mapped[Optional[str]] = mapped_column(String(500), nullable=True)
     video_url: Mapped[Optional[str]] = mapped_column(String(500), nullable=True)
     
-    # Denormalized counts for performance
     likes_count: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     retweets_count: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     replies_count: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
